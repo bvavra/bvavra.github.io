@@ -23,7 +23,8 @@ description: Developer, Composer, Accordionist
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  About: "aboutme"
+  Projects: #TODO
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
@@ -41,13 +42,13 @@ avatar: "/img/accordion.jpg"
 author:
   name: Brendan Vavra
   email: "brendan.vavra@gmail.com"
-  facebook: brendan.vavra  # eg. daattali
-  github: bvavra    # eg. daattali
-  twitter: brendanvavra   # eg. daattali
-  linkedin: brendan-vavra  # eg. daattali
-#  xing: yourname      # eg. daattali
+  facebook: brendan.vavra  
+  github: bvavra    
+  twitter: brendanvavra   
+  linkedin: brendan-vavra  
+#  xing: yourname      
 #  stackoverflow: yourlink  # eg. "3943160/daattali"
-  instagram: brendanvavra # eg. daattali
+  instagram: brendanvavra
 
 # Select which links to show in the footer
 footer-links-active:
