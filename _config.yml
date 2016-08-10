@@ -24,9 +24,10 @@ description: Developer, Composer, Accordionist
 # List of links in the navigation bar
 navbar-links:
   Home: "https://bvavra.github.io/"
-  About: "aboutme"
-  Projects: #TODO
-  Tags: "tags"
+  About: "about"
+  Projects: "projects"
+  Compositions: "composition"
+  Accordion: "accordion"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
