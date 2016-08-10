@@ -23,6 +23,7 @@ description: Developer, Composer, Accordionist
 
 # List of links in the navigation bar
 navbar-links:
+  Home: "https://bvavra.github.io/"
   About: "aboutme"
   Projects: #TODO
   Tags: "tags"
