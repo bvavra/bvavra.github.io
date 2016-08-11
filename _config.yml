@@ -25,8 +25,8 @@ description: Developer, Composer, Accordionist
 navbar-links:
   Home: "https://bvavra.github.io/"
   About: "about"
-  Projects: "projects"
-    - MIDI Accordion "http://bvavra.github.io/MIDI_Accordion"
+  Projects:
+    - MIDI Accordion: "http://bvavra.github.io/MIDI_Accordion"
   Compositions: "composition"
   Accordion: "accordion"
 #  Resources:
