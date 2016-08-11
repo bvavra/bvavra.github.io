@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: 'Some squeezing I''ve done, with music I''v arranged'
+subtitle: Some squeezing I've done, with music I've arranged
 published: true
 ---
 
