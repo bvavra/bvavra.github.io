@@ -29,6 +29,7 @@ navbar-links:
     - MIDI Accordion: "http://bvavra.github.io/MIDI_Accordion"
   Compositions: "composition"
   Accordion: "accordion"
+  Tags: "tags"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
