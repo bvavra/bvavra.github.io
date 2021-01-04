@@ -1,1 +1,38 @@
-<p>nav works!</p>
+<!--taken from https://ng-bootstrap.github.io/#/components/nav/examples
+See also https://getbootstrap.com/docs/4.5/components/navs/ for additional style options (e.g. right-aligned)-->
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs justify-content-end">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink>Home</a>
+      <ng-template ngbNavContent>
+        <p>test content 1</p>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink>About</a>
+      <ng-template ngbNavContent>
+        <p>test content 2</p>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="3"><!-- TODO: make dropdown-->
+      <a ngbNavLink>Projects</a>
+      <ng-template ngbNavContent>
+        <p>test content 3</p>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="4">
+      <a ngbNavLink>Compositions</a>
+      <ng-template ngbNavContent>
+        <p>test content 3</p>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="5">
+      <a ngbNavLink>Accordion</a>
+      <ng-template ngbNavContent>
+        <p>test content 3</p>
+      </ng-template>
+    </li>
+  </ul>
+  
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+  
+  <pre>Active: {{ active }}</pre>
