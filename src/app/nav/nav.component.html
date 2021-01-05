@@ -7,23 +7,22 @@ See also https://getbootstrap.com/docs/4.5/components/navs/ for additional style
     <li [ngbNavItem]="about">
         <a ngbNavLink routerLink="about">About</a>
     </li>
-    <li ngbDropdown class="nav-item"><!-- TODO: figure out how to make dropdown auto-expand-->
+    <li [ngbNavItem]="projects">
+        <a ngbNavLink routerLink="projects">Projects</a>
+    </li>
+    <li ngbDropdown class="nav-item"><!-- TODO: figure out how to make dropdown auto-expand.
+    See https://stackoverflow.com/questions/8878033/how-to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click and http://jsfiddle.net/2Smgv/3100/ 
+for example, but consider that we DON'T want this behavior on mobile (or rather, click should still work to expand)...-->
         <a href (click)="false" class="nav-link" ngbDropdownToggle>Projects</a>
         <div ngbDropdownMenu ><!--class="navlinks-children"-->
           <button ngbDropdownItem>MIDI Accordion</button>
           <button ngbDropdownItem>Something else here</button>
         </div>
     </li>
-    <li [ngbNavItem]="4">
-      <a ngbNavLink>Compositions</a>
-      <ng-template ngbNavContent>
-        <p>test content 3</p>
-      </ng-template>
+    <li [ngbNavItem]="compositions">
+      <a ngbNavLink routerLink="compositions">Compositions</a>
     </li>
-    <li [ngbNavItem]="5">
-      <a ngbNavLink>Accordion</a>
-      <ng-template ngbNavContent>
-        <p>test content 3</p>
-      </ng-template>
+    <li [ngbNavItem]="vgmcovers">
+        <a ngbNavLink routerLink="vgm-covers">VGM Covers</a>
     </li>
 </ul>

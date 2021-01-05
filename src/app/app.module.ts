@@ -9,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { CompositionsComponent } from './compositions/compositions.component';
+import { VgmCoversComponent } from './vgm-covers/vgm-covers.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { AboutComponent } from './about/about.component';
     NavComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    CompositionsComponent,
+    VgmCoversComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
