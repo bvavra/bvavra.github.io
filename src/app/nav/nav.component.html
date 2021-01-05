@@ -1,23 +1,18 @@
 <!--taken from https://ng-bootstrap.github.io/#/components/nav/examples
 See also https://getbootstrap.com/docs/4.5/components/navs/ for additional style options (e.g. right-aligned)-->
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs justify-content-end">
-    <li [ngbNavItem]="1">
-      <a ngbNavLink>Home</a>
-      <ng-template ngbNavContent>
-        <p>test content 1</p>
-      </ng-template>
+    <li [ngbNavItem]="home">
+        <a ngbNavLink routerLink="home">Home</a>
     </li>
-    <li [ngbNavItem]="2">
-      <a ngbNavLink>About</a>
-      <ng-template ngbNavContent>
-        <p>test content 2</p>
-      </ng-template>
+    <li [ngbNavItem]="about">
+        <a ngbNavLink routerLink="about">About</a>
     </li>
-    <li [ngbNavItem]="3"><!-- TODO: make dropdown-->
-      <a ngbNavLink>Projects</a>
-      <ng-template ngbNavContent>
-        <p>test content 3</p>
-      </ng-template>
+    <li ngbDropdown class="nav-item"><!-- TODO: figure out how to make dropdown auto-expand-->
+        <a href (click)="false" class="nav-link" ngbDropdownToggle>Projects</a>
+        <div ngbDropdownMenu ><!--class="navlinks-children"-->
+          <button ngbDropdownItem>MIDI Accordion</button>
+          <button ngbDropdownItem>Something else here</button>
+        </div>
     </li>
     <li [ngbNavItem]="4">
       <a ngbNavLink>Compositions</a>
@@ -31,8 +26,4 @@ See also https://getbootstrap.com/docs/4.5/components/navs/ for additional style
         <p>test content 3</p>
       </ng-template>
     </li>
-  </ul>
-  
-  <div [ngbNavOutlet]="nav" class="mt-2"></div>
-  
-  <pre>Active: {{ active }}</pre>
+</ul>
