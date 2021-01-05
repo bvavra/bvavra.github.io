@@ -10,7 +10,7 @@ See also https://getbootstrap.com/docs/4.5/components/navs/ for additional style
     <li [ngbNavItem]="projects">
         <a ngbNavLink routerLink="projects">Projects</a>
     </li>
-    <li ngbDropdown class="nav-item"><!-- TODO: figure out how to make dropdown auto-expand.
+    <li ngbDropdown class="nav-item"><!-- TODO: Decide if we actually want a dropdown here or not.  If so, figure out how to make dropdown auto-expand.
     See https://stackoverflow.com/questions/8878033/how-to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click and http://jsfiddle.net/2Smgv/3100/ 
 for example, but consider that we DON'T want this behavior on mobile (or rather, click should still work to expand)...-->
         <a href (click)="false" class="nav-link" ngbDropdownToggle>Projects</a>
@@ -25,4 +25,5 @@ for example, but consider that we DON'T want this behavior on mobile (or rather,
     <li [ngbNavItem]="vgmcovers">
         <a ngbNavLink routerLink="vgm-covers">VGM Covers</a>
     </li>
+    <!--TODO: do we want an accordion page?  if so, for what?-->
 </ul>
