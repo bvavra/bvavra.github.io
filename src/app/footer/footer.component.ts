@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Icon } from '../icon';
+import { ICONS } from '../icons';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+
+  icons = ICONS;
 
   year = new Date().getFullYear();
 
