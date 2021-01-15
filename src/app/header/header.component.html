@@ -1,11 +1,15 @@
 <!-- TODO:
-    - figure out how to align title and nav on same line
     - stick to top of page when scrolling down
     - include profile pic in center
     -- but only when at the top of the page - smoothly fade it out when scrolling starts
     - Bonus: shrink nav height when scrolling (or if not, keep skinny throughout)
 -->
-<nav class="navbar-custom">
-    <h1><a class="navbar-brand" href="{{url}}">{{title}}</a></h1>
-    <app-nav></app-nav>
+
+<nav class="navbar-custom navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{url}}">{{title}}</a>
+        </div>
+        <app-nav></app-nav>
+    </div>
 </nav>
