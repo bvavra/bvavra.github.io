@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { CompositionsComponent } from './compositions/compositions.component';
 import { VgmCoversComponent } from './vgm-covers/vgm-covers.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { PageHeadingComponent } from './page-heading/page-heading.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProjectsComponent } from './projects/projects.component';
     AboutComponent,
     CompositionsComponent,
     VgmCoversComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    PageHeadingComponent
   ],
   imports: [
     BrowserModule,
