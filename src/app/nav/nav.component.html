@@ -4,9 +4,12 @@ See also https://getbootstrap.com/docs/4.5/components/navs/ for additional style
 For collapsable:
 https://ng-bootstrap.github.io/#/components/collapse/examples
 https://stackblitz.com/run?file=src%2Fapp%2Fcollapse-navbar.html -->
-<button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
-    &#9776;
-</button>
+<div class="navbar-header">
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+        &#9776;
+    </button>
+</div> 
+<!-- TODO: make it so the mobile nav button expands the nav menu below the header full width instead of expanding the whole header-->
 <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse in">
     <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav navbar-nav">
         <li [ngbNavItem]="1">
