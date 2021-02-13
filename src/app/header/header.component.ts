@@ -19,11 +19,10 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // if (document.body.scrollTop <= 50 || document.documentElement.scrollTop <= 50) {
-    //   document.getElementById('navbar').classList.remove('top-nav-short');
-    // } else 
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    if (Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop) > 50) {
       document.getElementById('navbar').classList.add('top-nav-short');
+    } else {
+      document.getElementById('navbar').classList.remove('top-nav-short');
     }
   }
 
