@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { MarkdownModule } from 'ngx-markdown';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -14,6 +16,11 @@ import { VgmCoversComponent } from './vgm-covers/vgm-covers.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PageHeadingComponent } from './page-heading/page-heading.component';
 import { AvatarComponent } from './avatar/avatar.component';
+
+import 'prismjs';
+import 'prismjs/components/prism-typescript.min.js';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
+import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
 
 @NgModule({
   declarations: [
@@ -32,7 +39,8 @@ import { AvatarComponent } from './avatar/avatar.component';
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

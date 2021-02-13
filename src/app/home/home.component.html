@@ -3,8 +3,12 @@
 <div class="container">
     <div class="row">
         <!-- TODO: for some reason all the col-* usages of postiion:relative causes text to appear over nav menu - figure out why and fix! -->
-        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1" style="position:static;">
             <p>home works!</p>
+
+            <p>Markdown Test</p>
+            <markdown class="variable-binding" [data]="markdown"></markdown>
+
             <p>let's get some length to test</p>
             <p>let's get some length to test</p>
             <p>let's get some length to test</p>
@@ -31,5 +35,6 @@
 -- Do I want to dynamically add social media feeds (Twitter/IG) or maybe highlight latest YT/SC upload?
 -- Do I want a list of most recent blog posts like the current Jekyll site? (would I really blog?)
 - If I blog (or even if I decide not to), should we look into supporting rendering markdown files?
+-- ngx-markdown works!  See https://jfcere.github.io/ngx-markdown/get-started for docs
 -- see https://www.npmjs.com/package/ngx-markdown for details.
 -->
