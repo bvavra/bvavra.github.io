@@ -123,6 +123,8 @@ img {
   background: #F5F5F5;
   border-bottom: 1px solid #EAEAEA;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  min-height: 50px;
+  margin-bottom: 20px;
 }
 
 .navbar-custom .nav li a {
