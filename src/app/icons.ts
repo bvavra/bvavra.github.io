@@ -7,3 +7,5 @@ export const ICONS: Icon[] = [
   { id: 4, class: 'fa-instagram', link: 'https://www.instagram.com/brendanvavra', title: 'Instagram', style: 'fab' },
   { id: 5, class: 'fa-envelope', link: 'mailto:brendan.vavra@gmail.com', title: 'Email me', style: 'fa' }
 ];
+
+//Look for more icons here: https://fontawesome.com/icons?d=gallery&m=free

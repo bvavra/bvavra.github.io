@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   title = 'Brendan Vavra';
-  url = 'http://bvavra.github.io';
+  url = 'http://bvavra.github.io';//TODO - do I want to link directly to the URL 'http://bvavra.github.io', or do I want it to smart nav to Home like the nav menu? 
 
   constructor() { }
 
