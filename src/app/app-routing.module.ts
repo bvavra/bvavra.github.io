@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';//lets us use routes
-import { HomeComponent } from './home/home.component';//something we can route to
-import { AboutComponent } from './about/about.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { CompositionsComponent } from './compositions/compositions.component';
-import { VgmCoversComponent } from './vgm-covers/vgm-covers.component';
+import { HomeComponent } from './pages/home/home.component';//something we can route to
+import { AboutComponent } from './pages/about/about.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { CompositionsComponent } from './pages/compositions/compositions.component';
+import { VgmCoversComponent } from './pages/vgm-covers/vgm-covers.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },//Default route when navigating to root URL

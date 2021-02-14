@@ -5,17 +5,17 @@ import { MarkdownModule } from 'ngx-markdown';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderComponent } from './header/header.component';
-import { NavComponent } from './nav/nav.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './page-components/header/header.component';
+import { NavComponent } from './page-components/nav/nav.component';
+import { FooterComponent } from './page-components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { CompositionsComponent } from './compositions/compositions.component';
-import { VgmCoversComponent } from './vgm-covers/vgm-covers.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { PageHeadingComponent } from './page-heading/page-heading.component';
-import { AvatarComponent } from './avatar/avatar.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { CompositionsComponent } from './pages/compositions/compositions.component';
+import { VgmCoversComponent } from './pages/vgm-covers/vgm-covers.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { PageHeadingComponent } from './pages/page-heading/page-heading.component';
+import { AvatarComponent } from './page-components/avatar/avatar.component';
 
 import 'prismjs';
 import 'prismjs/components/prism-typescript.min.js';
