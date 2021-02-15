@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 //   https://medium.com/angular-in-depth/angular-routing-reusing-common-layout-for-pages-from-different-modules-440a23f86b57 
 
 import { MarkdownModule } from 'ngx-markdown';
-import { PageHeadingComponent } from '../page-heading/page-heading.component';
+import { PageHeadingComponent } from '@app/pages/page-heading/page-heading.component';
 
 @Component({
   selector: 'app-home',

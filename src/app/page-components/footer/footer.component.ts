@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Icon } from '../icon';
-import { ICONS } from '../icons';
+import { Icon } from '@app/page-components/icon';
+import { ICONS } from '@app/page-components/icons';
 
 @Component({
   selector: 'app-footer',
