@@ -10,7 +10,10 @@ export class AboutComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
+  title: string;
+
   ngOnInit(): void {
+    this.title = 'About Me';
   }
 
 }

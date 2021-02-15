@@ -1,11 +1,9 @@
-<!-- TODO:
-- pass in values for title and subtitle
-- don't show <hr> or subtitle if subtitle is null
--->
 <div class="intro-header">
     <div class="page-heading">
-        <h1>Brendan Vavra</h1>
-        <hr class="small">
-        <span class="page-subheading">Developer, Composer, Accordionist</span>
+        <h1>{{title}}</h1>
+        <div *ngIf="subtitle">
+            <hr class="small">
+            <span class="page-subheading">{{subtitle}}</span>
+        </div>
     </div>
 </div>

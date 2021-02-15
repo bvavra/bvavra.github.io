@@ -1,17 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-//TODO - seems weird I have to include these once I moved /home into /pages - figure out the proper way to do this
-// for markdown I think we should consider writing a Service class
-// here's one option: https://medium.com/@balramchavan/smarter-way-to-organize-import-statements-using-index-ts-file-s-in-angular-c685e9d645b7 
-// and in general I like the idea of defining absolute paths for components: 
-//   https://scotch.io/tutorials/reference-angular-imports-absolutely-for-easier-development
-// somewhat unrelated, but an interesting resource on best practices for reusing different layout templates:
-//   https://medium.com/angular-in-depth/angular-routing-reusing-common-layout-for-pages-from-different-modules-440a23f86b57 
-
-import { MarkdownModule } from 'ngx-markdown';
-import { PageHeadingComponent } from '@app/pages/page-heading/page-heading.component';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -39,7 +28,12 @@ const language = 'typescript';
 ### Blockquote
 > Blockquote to the max`;
 
+  title: string;
+  subtitle: string;
+
   ngOnInit(): void {
+    this.title = 'Brendan Vavra';
+    this.subtitle = 'Developer, Composer, Accordionist';
   }
 
 }
