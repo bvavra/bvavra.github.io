@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
 
 import { AppComponent } from './app.component';
@@ -42,7 +43,8 @@ import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot({ loader: HttpClient }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
