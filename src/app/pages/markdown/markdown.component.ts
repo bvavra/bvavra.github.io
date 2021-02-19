@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { MarkdownService } from '@app/services/markdown.service';
 
 @Component({
   selector: 'app-markdown',
@@ -8,11 +8,25 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MarkdownComponent implements OnInit {
 
-  constructor() { }
+  constructor(private markdownService: MarkdownService) { }
 
-  @Input() data: string;
+  @Input() fileName: string;
+  data: string;
 
   ngOnInit(): void {
+    this.getMarkdown(this.fileName);
   }
 
+  onReady(): void {
+    //Null Op for now
+  }
+
+  getMarkdown(fileName): void {
+    this.markdownService
+    .getMarkdownFromFile(fileName)
+    .subscribe(
+      data => this.data=data,
+      error => console.log(error)
+    );
+  }
 }

@@ -2,9 +2,9 @@
 ---
 
 ### Syntax highlight
-\`\`\`typescript
+```typescript
 const language = 'typescript';
-\`\`\`
+```
 
 ### Lists
 1. Ordered list
