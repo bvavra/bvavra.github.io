@@ -10,6 +10,11 @@ export class ProjectsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
+  title: string = 'Brendan\'s Projects';
+  //subtitle: string = '';
+
+  fileName: string = 'projects.md';
+
   ngOnInit(): void {
   }
 

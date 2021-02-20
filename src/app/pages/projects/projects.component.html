@@ -1,2 +1,16 @@
-<p>projects works!</p>
-<!-- TODO: decide if I want a projects landing page, or if we should nix this in favor of a nav dropdown-->
+<app-page-heading [title]="title"></app-page-heading>
+<!--TODO: figure out best way to make this page boilerplate into a reusable component-->
+<div class="container">
+    <div class="row">
+        <!-- TODO: for some reason all the col-* usages of postiion:relative causes text to appear over nav menu - figure out why and fix! 
+        In the meantime, hack in style="position:static;" and hope this doesn't bite us-->
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1" style="position:static;">
+
+            <app-markdown [fileName]="fileName"></app-markdown>
+
+        </div>
+    </div>
+</div>
+<!-- TODO: decide if I want a projects landing page, or if we should nix this in favor of a nav dropdown
+     -- update: nav dropdowns are messy (and not mobile friendly) - I'd like to avoid them if possible.
+-->

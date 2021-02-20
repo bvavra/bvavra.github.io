@@ -1,6 +1,19 @@
 <app-page-heading [title]="title"></app-page-heading>
-<p>about works!</p>
+<!--TODO: figure out best way to make this page boilerplate into a reusable component-->
+<div class="container">
+    <div class="row">
+        <!-- TODO: for some reason all the col-* usages of postiion:relative causes text to appear over nav menu - figure out why and fix! 
+        In the meantime, hack in style="position:static;" and hope this doesn't bite us-->
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1" style="position:static;">
+
+            <app-markdown [fileName]="fileName"></app-markdown>
+
+        </div>
+    </div>
+</div>
 <!-- TODO: 
     - write up a bio.  consider professional development vs music persona, etc.
     - determine if we want landing page links to other pages and, if so, decide if this is redundant with the home page.
+    -- I think it makes sense to keep this page and have this be the wordier bio section.
+       The home page should be less-wordy, more "check stuff out!"" clickable things
 -->

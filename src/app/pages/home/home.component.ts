@@ -10,14 +10,12 @@ export class HomeComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
-  title: string;
-  subtitle: string;
+  title: string = 'Brendan Vavra';
+  subtitle: string = 'Developer, Composer, Accordionist';
 
-  fileName: string = 'test.md';
+  fileName: string = 'home.md';
 
   ngOnInit(): void {
-    this.title = 'Brendan Vavra';
-    this.subtitle = 'Developer, Composer, Accordionist';
   }
 
 }

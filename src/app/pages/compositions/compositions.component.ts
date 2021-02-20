@@ -10,6 +10,9 @@ export class CompositionsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
+  title: string = 'Brendan\'s Music';
+  fileName: string = 'compositions.md';
+
   ngOnInit(): void {
   }
 
