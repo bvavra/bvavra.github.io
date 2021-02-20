@@ -27,6 +27,7 @@ navbar-links:
   About: "about"
   Projects:
     - MIDI Accordion: "http://bvavra.github.io/MIDI_Accordion"
+    - Other Projects: "projects"
   Compositions: "composition"
   Accordion: "accordion"
   Tags: "tags"
