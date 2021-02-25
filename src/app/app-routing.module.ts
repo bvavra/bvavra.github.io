@@ -18,7 +18,7 @@ const routes: Routes = [
 ];
 
 @NgModule({//Replaced from default
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule],//makes the routes available throughout the app
   providers: [MarkdownResolver]
 })
