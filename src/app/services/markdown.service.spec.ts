@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MarkdownServiceService } from './markdown-service.service';
+import { MarkdownService } from './markdown.service';
 
 describe('MarkdownServiceService', () => {
-  let service: MarkdownServiceService;
+  let service: MarkdownService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(MarkdownServiceService);
+    service = TestBed.inject(MarkdownService);
   });
 
   it('should be created', () => {

@@ -11,9 +11,10 @@ export class AboutComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   title: string = 'About Brendan';
-  fileName: string = 'about.md';
+  data: string;
 
   ngOnInit(): void {
+    this.data = this.route.snapshot.data.markdownData;
   }
 
 }

@@ -10,11 +10,14 @@ export class MarkdownComponent implements OnInit {
 
   constructor(private markdownService: MarkdownService) { }
 
+  //Can pass in one or the other
   @Input() fileName: string;
-  data: string;
+  @Input() data: string;
 
   ngOnInit(): void {
-    this.getMarkdown(this.fileName);
+    if(this.data === undefined){//If data not provided, get data by fileName instead
+      this.getMarkdown(this.fileName);
+    }
   }
 
   onReady(): void {

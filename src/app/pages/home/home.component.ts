@@ -13,9 +13,10 @@ export class HomeComponent implements OnInit {
   title: string = 'Brendan Vavra';
   subtitle: string = 'Developer, Composer, Accordionist';
 
-  fileName: string = 'home.md';
+  data: string;
 
   ngOnInit(): void {
+    this.data = this.route.snapshot.data.markdownData;
   }
 
 }

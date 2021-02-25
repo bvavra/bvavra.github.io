@@ -6,19 +6,21 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { CompositionsComponent } from './pages/compositions/compositions.component';
 import { VgmCoversComponent } from './pages/vgm-covers/vgm-covers.component';
+import { MarkdownResolver } from './resolvers/markdown-resolver';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },//Default route when navigating to root URL
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'compositions', component: CompositionsComponent },
+  { path: 'home', component: HomeComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'home.md'} },
+  { path: 'about', component: AboutComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'about.md'} },
+  { path: 'projects', component: ProjectsComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'projects.md'} },
+  { path: 'compositions', component: CompositionsComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'compositions.md'} },
   { path: 'vgm-covers', component: VgmCoversComponent },
 ];
 
 @NgModule({//Replaced from default
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]//makes the routes available throughout the app
+  exports: [RouterModule],//makes the routes available throughout the app
+  providers: [MarkdownResolver]
 })
 export class AppRoutingModule { }
 
