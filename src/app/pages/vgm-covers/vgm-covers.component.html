@@ -1,6 +1,41 @@
-<p>vgm-covers works!</p>
 <!--TODO: 
-    - decide if I actually want this here or not, or if I want an "accordion" page instead...
-    - either way, need to dynamically pull YT videos and display them here
-    - and also pull sheet music from the vgm-accordion-sheets repo if available.
+    -OKAY here's what we're going to do:
+    - (/) pull all videos in the VGM Cover playlist, default order: most-recent PLwO5aXJYrMqS4Ug3c0unTqDuNBVFURtSN
+    - (/) display title and embed videos
+    - scrape description - if contains sheet music url, pull it and make icon to directly access sheet music
+    -- maybe look for other things in description to scrape and display?
+    - search component (like in tour of heroes) - should be able to search for both title and tags
+    -- YT has a search API but returns results that are not actually relevant (no idea why)
  -->
+<app-page-heading [title]="title" [subtitle]="subtitle"></app-page-heading>
+<!--TODO: figure out best way to make this page boilerplate into a reusable component-->
+<div class="container">
+    <div class="row">
+        <!-- TODO: for some reason all the col-* usages of postiion:relative causes text to appear over nav menu - figure out why and fix! 
+        In the meantime, hack in style="position:static;" and hope this doesn't bite us-->
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1" style="position:static;">
+            <div *ngIf="vgmCoverVideos">
+                <ul class="list-inline text-center footer-links">
+                    <li *ngFor="let item of vgmCoverVideos.items"> 
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-7" style="position:static;">
+                                <h4>{{item.snippet.title}}</h4>
+                                <!--TODO: Add Date-->
+                            </div>
+                            <div class="col-sm-5" style="position:static;">
+                                <div class="video-container">
+                                    <!--Can optionally add ?controls=0 to URL to remove player controls-->
+                                    <iframe width="432" height="243" [src]="item.snippet.safeURL" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+ 
