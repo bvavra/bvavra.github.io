@@ -57,6 +57,9 @@ export interface youtubeVideo {
   publishedAt: Date;
   resourceId: youtubeVideoResource;
   safeURL: SafeResourceUrl;
+  sheetMusicURL: SafeResourceUrl;
+  composer: string;
+  game: string;
 }
 
 export interface youtubeVideoResource {
