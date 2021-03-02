@@ -7,6 +7,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { CompositionsComponent } from './pages/compositions/compositions.component';
 import { VgmCoversComponent } from './pages/vgm-covers/vgm-covers.component';
 import { MarkdownResolver } from './resolvers/markdown-resolver';
+import { SafeHtml } from './pipes/safehtml-pipe';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },//Default route when navigating to root URL
@@ -20,7 +21,7 @@ const routes: Routes = [
 @NgModule({//Replaced from default
   imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule],//makes the routes available throughout the app
-  providers: [MarkdownResolver]
+  providers: [MarkdownResolver, SafeHtml]
 })
 export class AppRoutingModule { }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SoundCloudTracks } from '@app/services/soundcloudtracks';
 
 @Component({
   selector: 'app-compositions',
@@ -9,6 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 export class CompositionsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
+
+  soundCloudTracks = SoundCloudTracks;
 
   title: string = 'Brendan\'s Music';
   data: string;

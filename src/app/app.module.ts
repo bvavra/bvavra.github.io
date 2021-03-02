@@ -18,6 +18,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { PageHeadingComponent } from './pages/page-heading/page-heading.component';
 import { AvatarComponent } from './page-components/avatar/avatar.component';
 import { MarkdownComponent } from './pages/markdown/markdown.component';
+import { SafeHtml } from './pipes/safehtml-pipe';
 
 import 'prismjs';
 import 'prismjs/components/prism-typescript.min.js';
@@ -37,7 +38,8 @@ import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
     ProjectsComponent,
     PageHeadingComponent,
     AvatarComponent,
-    MarkdownComponent
+    MarkdownComponent,
+    SafeHtml
   ],
   imports: [
     BrowserModule,
