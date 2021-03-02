@@ -130,7 +130,8 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "base-href": "/bvavra.github.io/",
-            "branch": "master"
+            "branch": "master",
+            "message": "Auto-generated commit from ng-deploy (see 'source' branch for change details)"
           }
         }
       }
