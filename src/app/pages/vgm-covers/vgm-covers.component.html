@@ -20,7 +20,7 @@
                     <li *ngFor="let item of vgmCoverVideos.items"> 
                         <hr>
                         <div class="row">
-                            <div class="col-sm-8" style="position:static;">
+                            <div class="col-sm-8" style="margin-bottom: 0.5em;">
                                 <h4>{{item.snippet.title}}</h4>
                                 <blockquote>Published on {{item.snippet.publishedAt | date:'dd-MMM-yyyy HH:mm:ss'}}</blockquote>
                                 <div *ngIf="item.snippet.composer">
@@ -29,8 +29,8 @@
                                 <div *ngIf="item.snippet.game">
                                     <div>{{item.snippet.game}}</div>
                                 </div>
-                                <br/>
-                                <div *ngIf="item.snippet.sheetMusicURL">
+                                
+                                <div *ngIf="item.snippet.sheetMusicURL" style="margin-top: 1em;">
                                     <a [href]="item.snippet.sheetMusicURL" title="Sheet Music" class="icon">
                                         <span class="fa-stack fa-lg">
                                           <i class="fa fa-circle fa-stack-2x"></i>
@@ -40,7 +40,7 @@
                                 </div>
                                 
                             </div>
-                            <div class="col-sm-4" style="position:static;">
+                            <div class="col-sm-4">
                                 <div class="video-container">
                                     <!--Can optionally add ?controls=0 to URL to remove player controls-->
                                     <iframe width="432" height="243" [src]="item.snippet.safeURL" frameborder="0"
