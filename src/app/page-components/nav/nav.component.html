@@ -13,13 +13,13 @@ https://stackblitz.com/run?file=src%2Fapp%2Fcollapse-navbar.html -->
 <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse in">
     <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav navbar-nav">
         <li [ngbNavItem]="1">
-            <a ngbNavLink routerLink="home" (click)="isMenuCollapsed = true">Home</a>
+            <a ngbNavLink routerLink="/" (click)="isMenuCollapsed = true">Home</a>
         </li>
         <li [ngbNavItem]="2">
-            <a ngbNavLink routerLink="about" (click)="isMenuCollapsed = true">About</a>
+            <a ngbNavLink routerLink="/about" (click)="isMenuCollapsed = true">About</a>
         </li>
         <li [ngbNavItem]="3">
-            <a ngbNavLink routerLink="projects" (click)="isMenuCollapsed = true">Projects</a>
+            <a ngbNavLink routerLink="/projects" (click)="isMenuCollapsed = true">Projects</a>
         </li>
         <!-- <li ngbDropdown class="nav-item"> TODO: Decide if we actually want a dropdown here or not.  If so, figure out how to make dropdown auto-expand.
         See https://stackoverflow.com/questions/8878033/how-to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click and http://jsfiddle.net/2Smgv/3100/ 
@@ -31,10 +31,10 @@ https://stackblitz.com/run?file=src%2Fapp%2Fcollapse-navbar.html -->
             </div>
         </li> -->
         <li [ngbNavItem]="4">
-            <a ngbNavLink routerLink="compositions" (click)="isMenuCollapsed = true">Compositions</a>
+            <a ngbNavLink routerLink="/compositions" (click)="isMenuCollapsed = true">Compositions</a>
         </li>
         <li [ngbNavItem]="5">
-            <a ngbNavLink routerLink="vgm-covers" (click)="isMenuCollapsed = true">VGM Covers</a>
+            <a ngbNavLink routerLink="/vgm-covers" (click)="isMenuCollapsed = true">VGM Covers</a>
         </li>
         <!--TODO: do we want an accordion page?  if so, for what?-->
     </ul>

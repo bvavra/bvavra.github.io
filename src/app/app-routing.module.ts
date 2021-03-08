@@ -10,8 +10,8 @@ import { MarkdownResolver } from './resolvers/markdown-resolver';
 import { SafeHtml } from './pipes/safehtml-pipe';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },//Default route when navigating to root URL
-  { path: 'home', component: HomeComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'home.md'} },
+  { path: 'home', redirectTo: '/', pathMatch: 'full' },//Default route when navigating to root URL
+  { path: '', component: HomeComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'home.md'} },
   { path: 'about', component: AboutComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'about.md'} },
   { path: 'projects', component: ProjectsComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'projects.md'} },
   { path: 'compositions', component: CompositionsComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'compositions.md'} },
