@@ -16,6 +16,16 @@ export class CompositionsComponent implements OnInit {
 
   ngOnInit(): void {
     this.data = this.route.snapshot.data.markdownData;
+
+    this.soundCloudTracks.map((obj) => {
+      obj.iframeSrcURL = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/' + obj.iframeSrcURI 
+        + '&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true';
+      obj.trackURL = 'https://soundcloud.com/brendanvavra/' + obj.trackURI;
+      if(!obj.height){
+        obj.height = "166";
+      }
+      return obj;
+    });
   }
 
 }

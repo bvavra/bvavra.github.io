@@ -23,7 +23,7 @@
                     </div>
                     
                     <div *ngIf="item.snippet.sheetMusicURL" class="icon">
-                        <a [href]="item.snippet.sheetMusicURL" title="Sheet Music">
+                        <a [href]="item.snippet.sheetMusicURL | safeResourceURL" title="Sheet Music">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fas fa-scroll fa-stack-1x fa-inverse"></i>
@@ -35,7 +35,7 @@
                 <div class="col-sm-4">
                     <div class="video-container">
                         <!--Can optionally add ?controls=0 to URL to remove player controls-->
-                        <iframe width="432" height="243" [src]="item.snippet.safeURL" frameborder="0"
+                        <iframe width="432" height="243" [src]="item.snippet.safeURL | safeResourceURL" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
                     </div>

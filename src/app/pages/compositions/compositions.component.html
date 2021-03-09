@@ -4,7 +4,11 @@
     <h3>{{soundcloudTrack.title}}</h3>
     <blockquote>{{soundcloudTrack.year}}</blockquote>
     <p [innerHTML]="soundcloudTrack.description"></p>
-    <div [innerHTML]="soundcloudTrack.embedHTML | safeHtml"></div>
+    <iframe width="100%" [height]="soundcloudTrack.height" scrolling="no" frameborder="no" allow="autoplay" [src]="soundcloudTrack.iframeSrcURL | safeResourceURL"></iframe>
+    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+        <a href="https://soundcloud.com/brendanvavra" title="Brendan Vavra" target="_blank" style="color: #cccccc; text-decoration: none;">Brendan Vavra</a> · 
+        <a [href]="soundcloudTrack.trackURL | safeResourceURL" [title]="soundcloudTrack.title" target="_blank" style="color: #cccccc; text-decoration: none;">{{soundcloudTrack.title}}</a>
+    </div>
 </div>
 <!--TODO: Composition Page Items:
     - see if I can figure out the SoundCloud API

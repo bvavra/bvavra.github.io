@@ -9,6 +9,7 @@ import { CompositionsComponent } from './pages/compositions/compositions.compone
 import { VgmCoversComponent } from './pages/vgm-covers/vgm-covers.component';
 import { MarkdownResolver } from './resolvers/markdown-resolver';
 import { SafeHtml } from './pipes/safehtml-pipe';
+import { SafeResourceURL } from './pipes/saferesourceurl-pipe';
 
 const routes: Routes = [
   { 
@@ -47,7 +48,7 @@ const routes: Routes = [
 @NgModule({//Replaced from default
   imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule],//makes the routes available throughout the app
-  providers: [MarkdownResolver, SafeHtml]
+  providers: [MarkdownResolver, SafeHtml, SafeResourceURL]
 })
 export class AppRoutingModule { }
 
