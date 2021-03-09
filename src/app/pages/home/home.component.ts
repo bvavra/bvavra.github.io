@@ -10,12 +10,9 @@ export class HomeComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
-  title: string = 'Brendan Vavra';
-  subtitle: string = 'Developer, Composer, Accordionist';
-
   data: string;
 
-  ngOnInit(): void {
+  ngOnInit(): void {   
     this.data = this.route.snapshot.data.markdownData;
   }
 

@@ -3,13 +3,14 @@ import { NgModule } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './page-components/header/header.component';
 import { NavComponent } from './page-components/nav/nav.component';
 import { FooterComponent } from './page-components/footer/footer.component';
-import { AppRoutingModule } from './app-routing.module';
+import { ContentTemplateComponent } from './page-components/content-template/content-template.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CompositionsComponent } from './pages/compositions/compositions.component';
@@ -31,6 +32,7 @@ import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
     HeaderComponent,
     NavComponent,
     FooterComponent,
+    ContentTemplateComponent,
     HomeComponent,
     AboutComponent,
     CompositionsComponent,

@@ -1,58 +1,47 @@
-<!--TODO: 
-    -OKAY here's what we're going to do:
-    - (/) pull all videos in the VGM Cover playlist, default order: most-recent PLwO5aXJYrMqS4Ug3c0unTqDuNBVFURtSN
-    - (/) display title and embed videos
-    - (/) scrape description - if contains sheet music url, pull it and make icon to directly access sheet music
-    -- (/) maybe look for other things in description to scrape and display (like composer/game)?
+<!--TODO: VGM Page Items:
+    - look for other things in description to scrape and display (like links to PM albums, etc.)?
     - paging (currently only shows 10 results, can we use paging or an infinite-scroller?)
     - search component (like in tour of heroes) - should be able to search for both title and tags
     -- YT has a search API but returns results that are not actually relevant (no idea why), 
        so ideally we'd pull everything and filter client-side
     -- note: should search through ALL posts, even if they aren't currently rendered...    
  -->
-<app-page-heading [title]="title" [subtitle]="subtitle"></app-page-heading>
-<!--TODO: figure out best way to make this page boilerplate into a reusable component-->
-<div class="container">
-    <div class="row">
-        <!-- <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1"> -->
-            <div *ngIf="vgmCoverVideos">
-                <ul class="list-inline text-center footer-links">
-                    <li *ngFor="let item of vgmCoverVideos.items"> 
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-8" style="margin-bottom: 0.5em;">
-                                <h4>{{item.snippet.title}}</h4>
-                                <blockquote>Published on {{item.snippet.publishedAt | date:'dd-MMM-yyyy HH:mm:ss'}}</blockquote>
-                                <div *ngIf="item.snippet.composer">
-                                    <div>Original {{item.snippet.composer}}</div>
-                                </div>
-                                <div *ngIf="item.snippet.game">
-                                    <div>{{item.snippet.game}}</div>
-                                </div>
-                                
-                                <div *ngIf="item.snippet.sheetMusicURL" style="margin-top: 1em;">
-                                    <a [href]="item.snippet.sheetMusicURL" title="Sheet Music" class="icon">
-                                        <span class="fa-stack fa-lg">
-                                          <i class="fa fa-circle fa-stack-2x"></i>
-                                          <i class="fas fa-scroll fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                                
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="video-container">
-                                    <!--Can optionally add ?controls=0 to URL to remove player controls-->
-                                    <iframe width="432" height="243" [src]="item.snippet.safeURL" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+
+<div *ngIf="vgmCoverVideos">
+    <ul class="list-inline text-center footer-links">
+        <li *ngFor="let item of vgmCoverVideos.items"> 
+            <hr>
+            <div class="row">
+                <div class="col-sm-8" style="margin-bottom: 0.5em;">
+                    <h4>{{item.snippet.title}}</h4>
+                    <blockquote>Published on {{item.snippet.publishedAt | date:'dd MMM yyyy HH:mm:ss'}}</blockquote>
+                    <div *ngIf="item.snippet.composer">
+                        <div>Original {{item.snippet.composer}}</div>
+                    </div>
+                    <div *ngIf="item.snippet.game">
+                        <div>{{item.snippet.game}}</div>
+                    </div>
+                    
+                    <div *ngIf="item.snippet.sheetMusicURL" class="icon">
+                        <a [href]="item.snippet.sheetMusicURL" title="Sheet Music">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-scroll fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-4">
+                    <div class="video-container">
+                        <!--Can optionally add ?controls=0 to URL to remove player controls-->
+                        <iframe width="432" height="243" [src]="item.snippet.safeURL" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
-        <!-- </div> -->
-    </div>
+        </li>
+    </ul>
 </div>
  

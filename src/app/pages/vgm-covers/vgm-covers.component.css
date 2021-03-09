@@ -16,5 +16,9 @@
 }
 
 .icon {
+    margin-top: 1em;
+}
+
+.icon a {
     color: #404040;
 }

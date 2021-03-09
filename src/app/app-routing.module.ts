@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';//lets us use routes
+import { ContentTemplateComponent } from './page-components/content-template/content-template.component'
 import { HomeComponent } from './pages/home/home.component';//something we can route to
 import { AboutComponent } from './pages/about/about.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
@@ -10,12 +11,37 @@ import { MarkdownResolver } from './resolvers/markdown-resolver';
 import { SafeHtml } from './pipes/safehtml-pipe';
 
 const routes: Routes = [
-  { path: 'home', redirectTo: '/', pathMatch: 'full' },//Default route when navigating to root URL
-  { path: '', component: HomeComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'home.md'} },
-  { path: 'about', component: AboutComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'about.md'} },
-  { path: 'projects', component: ProjectsComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'projects.md'} },
-  { path: 'compositions', component: CompositionsComponent, resolve: { markdownData: MarkdownResolver }, data: { fileName: 'compositions.md'} },
-  { path: 'vgm-covers', component: VgmCoversComponent },
+  { 
+    path: '', 
+    component: ContentTemplateComponent,
+    children: [
+      { 
+        path: '', component: HomeComponent, pathMatch: 'full', 
+        resolve: { markdownData: MarkdownResolver }, 
+        data: { fileName: 'home.md', title: 'Brendan Vavra', subtitle: 'Developer, Composer, Accordionist'} 
+      },
+      { 
+        path: 'about', component: AboutComponent, 
+        resolve: { markdownData: MarkdownResolver }, 
+        data: { fileName: 'about.md', title: 'About Brendan'} 
+      },
+      { 
+        path: 'projects', component: ProjectsComponent, 
+        resolve: { markdownData: MarkdownResolver }, 
+        data: { fileName: 'projects.md', title: 'Brendan\'s Projects'} 
+      },
+      { 
+        path: 'compositions', component: CompositionsComponent, 
+        resolve: { markdownData: MarkdownResolver }, 
+        data: { fileName: 'compositions.md', title: 'Brendan\'s Music'} 
+      },
+      { 
+        path: 'vgm-covers', component: VgmCoversComponent,
+        data: { title: 'Brendan\'s Covers', subtitle: 'Mostly Video Game Music', wideLayout: true } 
+      }
+    ]
+  },
+  { path: 'home', redirectTo: '/', pathMatch: 'full' }
 ];
 
 @NgModule({//Replaced from default

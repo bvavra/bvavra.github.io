@@ -9,8 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class AboutComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
-
-  title: string = 'About Brendan';
+  
   data: string;
 
   ngOnInit(): void {

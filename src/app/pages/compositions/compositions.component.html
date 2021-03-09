@@ -1,20 +1,12 @@
-<app-page-heading [title]="title"></app-page-heading>
-<!--TODO: figure out best way to make this page boilerplate into a reusable component-->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1" >
-            <app-markdown [data]="data"></app-markdown> 
-            <div *ngFor="let soundcloudTrack of soundCloudTracks"> 
-                <hr>
-                <h3>{{soundcloudTrack.title}}</h3>
-                <blockquote>{{soundcloudTrack.year}}</blockquote>
-                <p [innerHTML]="soundcloudTrack.description"></p>
-                <div [innerHTML]="soundcloudTrack.embedHTML | safeHtml"></div>
-            </div>
-        </div>
-    </div>
+<app-markdown [data]="data"></app-markdown> 
+<div *ngFor="let soundcloudTrack of soundCloudTracks"> 
+    <hr>
+    <h3>{{soundcloudTrack.title}}</h3>
+    <blockquote>{{soundcloudTrack.year}}</blockquote>
+    <p [innerHTML]="soundcloudTrack.description"></p>
+    <div [innerHTML]="soundcloudTrack.embedHTML | safeHtml"></div>
 </div>
-<!--TODO: 
+<!--TODO: Composition Page Items:
     - see if I can figure out the SoundCloud API
     - look into how I'd want to self-publish/sell my original works (Sheet Music Plus? Score Exchange?)
 -->
