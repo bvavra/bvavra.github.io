@@ -11,6 +11,7 @@ export class MarkdownResolver implements Resolve<Observable<any>> {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any>{
       let fileName = route.data['fileName']; 
+      //TODO - is there a way we can be smarter and not grab from file if we've already done this before?
       return this.markdownService.getMarkdownFromFile(fileName);
   }
 }

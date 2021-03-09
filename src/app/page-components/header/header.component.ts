@@ -9,7 +9,7 @@ import { DOCUMENT } from '@angular/common';
 export class HeaderComponent implements OnInit {
 
   title = 'Brendan Vavra';
-  url = 'http://bvavra.github.io';//TODO - do I want to link directly to the URL 'http://bvavra.github.io', or do I want it to smart nav to Home like the nav menu? 
+  url = '/';//'http://bvavra.github.io'
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
