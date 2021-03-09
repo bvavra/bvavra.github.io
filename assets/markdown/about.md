@@ -1,6 +1,6 @@
 ## As a Developer
 
-Brendan has been working as a professional software developer since 2010.  He graduated with a BA in Computer Science from Ithaca College.
+Brendan has been working as a professional software developer since 2010.  He graduated with a BA in Computer Science from Ithaca College in 2010.
 
 [Check out Brendan's side projects!](./projects)
 
@@ -8,7 +8,7 @@ Brendan has been working as a professional software developer since 2010.  He gr
 
 ## As a Composer
 
-Brendan has been composing music since 2001.  After composing the music for his high school's marching band and winning the 2004 Atlantic Coast Championship award for Best Music, he decided to pursue an education in music composition at Ithaca College.
+Brendan has been composing music since 2001.  After composing the music for his high school's marching band and winning the 2004 Atlantic Coast Championship award for Best Music, he decided to pursue an education in music composition at Ithaca College, where he got his BM in 2010.
 
 [Check out Brendan's original compositions!](./compositions)
 
