@@ -1,24 +1,31 @@
-<app-markdown [data]="data"></app-markdown> 
 <div *ngFor="let soundcloudTrack of soundCloudTracks"> 
     <hr>
-    <div *ngIf="soundcloudTrack.sheetMusicURL" class="icon">
-        <a [href]="soundcloudTrack.sheetMusicURL | safeResourceURL" target="_blank" title="Purchase Sheet Music">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fas fa-scroll fa-stack-1x fa-inverse"></i>
-            </span>
-        </a>
-    </div>
-    <h3>{{soundcloudTrack.title}}</h3>
-    <blockquote>{{soundcloudTrack.year}}</blockquote>
-    <p [innerHTML]="soundcloudTrack.description"></p>
-    <iframe width="100%" [height]="soundcloudTrack.height" scrolling="no" frameborder="no" allow="autoplay" [src]="soundcloudTrack.iframeSrcURL | safeResourceURL"></iframe>
-    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-        <a href="https://soundcloud.com/brendanvavra" title="Brendan Vavra" target="_blank" style="color: #cccccc; text-decoration: none;">Brendan Vavra</a> · 
-        <a [href]="soundcloudTrack.trackURL | safeResourceURL" [title]="soundcloudTrack.title" target="_blank" style="color: #cccccc; text-decoration: none;">{{soundcloudTrack.title}}</a>
+    <div class="row">
+        <div class="col-sm-8" style="margin-bottom: 0.5em;">
+            <blockquote style="float:right; margin-top: 0.5em;">{{soundcloudTrack.year}}</blockquote>
+            <h3>{{soundcloudTrack.title}}</h3>
+            
+            <p [innerHTML]="soundcloudTrack.description"></p>
+            <div *ngIf="soundcloudTrack.sheetMusicURL" class="icon text-center">
+                <a [href]="soundcloudTrack.sheetMusicURL | safeResourceURL" target="_blank" title="Purchase Sheet Music">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-scroll fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <iframe width="100%" [height]="soundcloudTrack.height" scrolling="no" frameborder="no" allow="autoplay" [src]="soundcloudTrack.iframeSrcURL | safeResourceURL"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/brendanvavra" title="Brendan Vavra" target="_blank" style="color: #cccccc; text-decoration: none;">Brendan Vavra</a> · 
+                <a [href]="soundcloudTrack.trackURL | safeResourceURL" [title]="soundcloudTrack.title" target="_blank" style="color: #cccccc; text-decoration: none;">{{soundcloudTrack.title}}</a>
+            </div>
+        </div>
     </div>
 </div>
+<hr>
+<app-markdown [data]="data"></app-markdown> 
 <!--TODO: Composition Page Items:
     - see if I can figure out the SoundCloud API
-    - look into how I'd want to self-publish/sell my original works (Sheet Music Plus? Score Exchange?)
 -->

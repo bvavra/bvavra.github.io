@@ -34,7 +34,7 @@ const routes: Routes = [
       { 
         path: 'compositions', component: CompositionsComponent, 
         resolve: { markdownData: MarkdownResolver }, 
-        data: { fileName: 'compositions.md', title: 'Brendan\'s Music'} 
+        data: { fileName: 'compositions.md', title: 'Brendan\'s Music', wideLayout: true} 
       },
       { 
         path: 'vgm-covers', component: VgmCoversComponent,
