@@ -8,6 +8,7 @@ export interface SoundCloudTrack {
   trackURI: string;
   iframeSrcURL?: SafeResourceUrl;
   trackURL?: SafeResourceUrl;
+  sheetMusicURL?: string;
   height?: string;
 }
 
@@ -34,5 +35,6 @@ export const SoundCloudTracks: SoundCloudTrack[] = [
     description: `This original composition for solo piano combines serialism with minimalism, inspired by the works of Milton Babbit and John Adams.
       <br/><br/>
       Performed by Brendon Shapiro at the Ithaca College Fall 2007 Student Composition Recital`, 
-    iframeSrcURI:'tracks/993290824', trackURI: 'trxhceueuibb-therubixcube' }
+    iframeSrcURI:'tracks/993290824', trackURI: 'trxhceueuibb-therubixcube',
+    sheetMusicURL: 'https://www.sheetmusicplus.com/title/therubixcube-digital-sheet-music/22010214' }
 ];

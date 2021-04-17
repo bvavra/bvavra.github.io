@@ -1,6 +1,14 @@
 <app-markdown [data]="data"></app-markdown> 
 <div *ngFor="let soundcloudTrack of soundCloudTracks"> 
     <hr>
+    <div *ngIf="soundcloudTrack.sheetMusicURL" class="icon">
+        <a [href]="soundcloudTrack.sheetMusicURL | safeResourceURL" target="_blank" title="Purchase Sheet Music">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-scroll fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </div>
     <h3>{{soundcloudTrack.title}}</h3>
     <blockquote>{{soundcloudTrack.year}}</blockquote>
     <p [innerHTML]="soundcloudTrack.description"></p>
