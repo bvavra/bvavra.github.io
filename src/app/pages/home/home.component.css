@@ -1,0 +1,8 @@
+.list-inline>li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.pager>li>a {
+    border: 1px solid #ddd;
+}
