@@ -5,6 +5,7 @@
     -- YT has a search API but returns results that are not actually relevant (no idea why), 
        so ideally we'd pull everything and filter client-side
     -- note: should search through ALL posts, even if they aren't currently rendered...    
+    - I'm thinking of adding an inner tab section of youtube stuff, Pixel Mixers album tracks (or maybe just soundcloud stuffs in general), and FAQs.
  -->
 
 <div *ngIf="vgmCoverVideos">
@@ -23,7 +24,7 @@
                     </div>
                     
                     <div *ngIf="item.snippet.sheetMusicURL" class="icon">
-                        <a [href]="item.snippet.sheetMusicURL | safeResourceURL" title="Sheet Music">
+                        <a [href]="item.snippet.sheetMusicURL | safeResourceURL" target="_blank" title="Sheet Music">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fas fa-scroll fa-stack-1x fa-inverse"></i>
