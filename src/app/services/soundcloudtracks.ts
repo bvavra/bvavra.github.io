@@ -25,7 +25,8 @@ export const SoundCloudTracks: SoundCloudTrack[] = [
       Emily Wespiser, flute; Devon LePore, clarinet; Isaac Shiman, violin; Brooks Griffith, cello;
       <br/>
       Performed at the Ithaca College Fall 2009 Student Composition Recital`, 
-    iframeSrcURI:'playlists/23499189', trackURI: 'sets/vega', height: "400" },
+    iframeSrcURI:'playlists/23499189', trackURI: 'sets/vega', height: "400",
+    sheetMusicURL: 'https://www.sheetmusicplus.com/title/vega-digital-sheet-music/22011371' },
   { title: 'Slow Night', year: '2009', 
     description: `This original piece for Wind Quintet was inspired by the painting in this image, which was created by my brother, Casey Vavra.
       <br/><br/>
