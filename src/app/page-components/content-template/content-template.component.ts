@@ -13,6 +13,7 @@ export class ContentTemplateComponent implements OnInit {
   title: string;
   subtitle: string;
   wideLayout: boolean;
+  bigImg: string;
   sub: Subscription;
 
   constructor(private router: Router, private route: ActivatedRoute) {
@@ -34,6 +35,7 @@ export class ContentTemplateComponent implements OnInit {
         this.title = route.data.title;
         this.subtitle = route.data.subtitle;
         this.wideLayout = route.data.wideLayout;
+        this.bigImg = route.data.bigImg;
       });
   }
 

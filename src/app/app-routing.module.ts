@@ -34,11 +34,11 @@ const routes: Routes = [
       { 
         path: 'compositions', component: CompositionsComponent, 
         resolve: { markdownData: MarkdownResolver }, 
-        data: { fileName: 'compositions.md', title: 'Brendan\'s Music', wideLayout: true} 
+        data: { fileName: 'compositions.md', title: 'Brendan\'s Music', wideLayout: true } 
       },
       { 
         path: 'vgm-covers', component: VgmCoversComponent,
-        data: { title: 'Brendan\'s Covers', subtitle: 'Mostly Video Game Music', wideLayout: true } 
+        data: { title: 'Brendan\'s Covers', subtitle: 'Mostly Video Game Music', wideLayout: true, bigImg: 'assets/img/vgm-covers.jpg' } 
       }
     ]
   },

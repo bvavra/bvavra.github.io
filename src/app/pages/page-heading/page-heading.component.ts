@@ -11,6 +11,7 @@ export class PageHeadingComponent implements OnInit {
 
   @Input() title: string;
   @Input() subtitle: string;
+  @Input() bigImg: string;
 
   ngOnInit(): void {
   }

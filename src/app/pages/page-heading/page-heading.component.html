@@ -1,9 +1,25 @@
-<div class="intro-header">
-    <div class="page-heading">
-        <h1>{{title}}</h1>
-        <div *ngIf="subtitle">
-            <hr class="small">
-            <span class="page-subheading">{{subtitle}}</span>
+<div *ngIf="bigImg; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <div class="big-img intro-header" style="background-image: url('{{bigImg}}');">
+        <div class="intro-header">
+            <div class="page-heading">
+                <h1>{{title}}</h1>
+                <div *ngIf="subtitle">
+                    <hr class="small">
+                    <span class="page-subheading">{{subtitle}}</span>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</ng-template>
+<ng-template #elseBlock>
+    <div class="intro-header">
+        <div class="page-heading">
+            <h1>{{title}}</h1>
+            <div *ngIf="subtitle">
+                <hr class="small">
+                <span class="page-subheading">{{subtitle}}</span>
+            </div>
+        </div>
+    </div>
+</ng-template>
