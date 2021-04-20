@@ -31,7 +31,8 @@ export const SoundCloudTracks: SoundCloudTrack[] = [
     description: `This original piece for Wind Quintet was inspired by the painting in this image, which was created by my brother, Casey Vavra.
       <br/><br/>
       Performed at the Ithaca College Spring 2009 Student Composition Recital`, 
-    iframeSrcURI:'tracks/996417265', trackURI: 'slow-night-for-wind-quintet' },
+    iframeSrcURI:'tracks/996417265', trackURI: 'slow-night-for-wind-quintet',
+    sheetMusicURL: 'https://www.sheetmusicplus.com/title/slow-night-digital-sheet-music/22012569' },
   { title: 'TRXHCEUEUIBB (THERUBIXCUBE)', year: '2007', 
     description: `This original composition for solo piano combines serialism with minimalism, inspired by the works of Milton Babbit and John Adams.
       <br/><br/>
