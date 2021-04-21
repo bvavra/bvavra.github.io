@@ -10,10 +10,8 @@ export class ProjectsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
-  data: string;
 
   ngOnInit(): void {
-    this.data = this.route.snapshot.data.markdownData;
   }
 
 }
