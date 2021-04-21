@@ -9,11 +9,3 @@ a:focus {
     display: inline-block;
     padding-right: 10px;
 }
-
-.pager>li {
-    margin: 1em 0.5em;
-}
-
-.pager>li>a {
-    border: 1px solid #ddd;
-}

@@ -541,6 +541,10 @@ footer .theme-by {
 
 /* --- Pager --- */
 
+.pager li {
+  margin: 1em 0.5em;
+}
+
 .pager li a {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -551,6 +555,7 @@ footer .theme-by {
   background: #FFF;
   border-radius: 0;
   color: #404040;
+  border: 1px solid #ddd;
 }
 @media only screen and (min-width: 768px) {
   .pager li a {
@@ -563,6 +568,8 @@ footer .theme-by {
   background: #0085a1;
   border: 1px solid #0085a1;
 }
+
+
 
 .pager {
   margin: 10px 0 0;
