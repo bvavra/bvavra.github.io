@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AvatarComponent implements OnInit {
 
-  imgUrl = 'assets/img/accordion.jpg';
+  imgUrl = 'assets/img/accordion2.jpg';
   url = 'http://bvavra.github.io';
 
   constructor() { }
 
   ngOnInit(): void {
     this.url = 'http://bvavra.github.io';
-    this.imgUrl = 'assets/img/accordion.jpg';
+    this.imgUrl = 'assets/img/accordion2.jpg';
   }
 
 }
