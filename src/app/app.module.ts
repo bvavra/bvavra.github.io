@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 import { HeaderComponent } from './page-components/header/header.component';
 import { NavComponent } from './page-components/nav/nav.component';
 import { FooterComponent } from './page-components/footer/footer.component';
@@ -50,7 +52,8 @@ import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
     NgbModule,
     AppRoutingModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
-    HttpClientModule
+    HttpClientModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
