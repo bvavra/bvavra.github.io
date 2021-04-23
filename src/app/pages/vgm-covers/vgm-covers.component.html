@@ -1,16 +1,15 @@
 <!--TODO: VGM Page Items:
     - look for other things in description to scrape and display (like links to PM albums, etc.)?
-    - paging (currently only shows 10 results, can we use paging or an infinite-scroller?)
-    - search component (like in tour of heroes) - should be able to search for both title and tags
+    - search component (like in tour of heroes) - should be able to search for both title and tags 
     -- YT has a search API but returns results that are not actually relevant (no idea why), 
        so ideally we'd pull everything and filter client-side
     -- note: should search through ALL posts, even if they aren't currently rendered...    
     - I'm thinking of adding an inner tab section of youtube stuff, Pixel Mixers album tracks (or maybe just soundcloud stuffs in general), and FAQs.
  -->
 
-<div class="container" *ngIf="vgmCoverVideos">
+<div class="container" *ngIf="vgmCoverVideos" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="150" (scrolled)="onScroll()">
     <ul class="list-inline text-center footer-links">
-        <li *ngFor="let item of vgmCoverVideos.items"> 
+        <li *ngFor="let item of vgmCoverVideos"> 
             <hr>
             <div class="row">
                 <div class="col-sm-8" style="margin-bottom: 0.5em;">

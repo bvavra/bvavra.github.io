@@ -16,13 +16,16 @@ export class YoutubeService {
   channelId: string = 'UCNoZbcrp9AXKxevNwGelc9g';
   playlistId_channel: string = 'UUNoZbcrp9AXKxevNwGelc9g';
   playlistId_VGMCovers: string = 'PLwO5aXJYrMqS4Ug3c0unTqDuNBVFURtSN';
+  defaultPageSize: number = 10;
 
-  getChannelVideos(): Observable<playlistItemListResponse> {
-     return this.getPlaylistVideos(this.playlistId_channel);
+  getChannelVideos(pageToken): Observable<playlistItemListResponse> {
+     return this.getPlaylistVideos(this.playlistId_channel, pageToken);
   }
 
-  getPlaylistVideos(playlistId): Observable<playlistItemListResponse> {
-    return this.http.get<playlistItemListResponse>(this.urlRoot + 'playlistItems?playlistId=' + playlistId + '&part=snippet&maxResults=10&key=' + this.apiKey);
+  getPlaylistVideos(playlistId, pageToken): Observable<playlistItemListResponse> {
+    if (pageToken !== undefined){
+      return this.http.get<playlistItemListResponse>(this.urlRoot + 'playlistItems?playlistId=' + playlistId + '&part=snippet&maxResults=' + this.defaultPageSize + '&key=' + this.apiKey + '&pageToken=' + pageToken);
+    }
   }
 
   //Get Data for YT Video by Id:
@@ -42,6 +45,7 @@ export class YoutubeService {
 
 export interface playlistItemListResponse {
   kind: string;
+  nextPageToken: string;
   items: Array<playlistItem>;
 }
 
