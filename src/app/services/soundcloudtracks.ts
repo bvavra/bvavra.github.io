@@ -38,5 +38,12 @@ export const SoundCloudTracks: SoundCloudTrack[] = [
       <br/><br/>
       Performed by Brendon Shapiro at the Ithaca College Fall 2007 Student Composition Recital`, 
     iframeSrcURI:'tracks/993290824', trackURI: 'trxhceueuibb-therubixcube',
-    sheetMusicURL: 'https://www.sheetmusicplus.com/title/therubixcube-digital-sheet-music/22010214' }
+    sheetMusicURL: 'https://www.sheetmusicplus.com/title/therubixcube-digital-sheet-music/22010214' },
+  { title: 'Zafar', year: '2006', 
+    description: `Zafar is the name of an ancient Himyarite city located in what is now present day Yemen. This piece explores the use of bitonality coupled with the Arabic scale, 
+    which evokes a Middle Eastern feel befitting the title.
+      <br/><br/>
+      Performed by Thomas Lehman (bass trombone) and Brendon Shapiro (piano) at the Ithaca College 2006 Freshman Composition recital.`, 
+    iframeSrcURI:'tracks/1039938820', trackURI: 'zafar-solo-for-bass-trombone-and-piano',
+    sheetMusicURL: 'https://www.sheetmusicplus.com/title/zafar-digital-sheet-music/22020796' }
 ];
