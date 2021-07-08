@@ -1,23 +1,33 @@
 ## As a Developer
 
-Brendan has been working as a professional software developer since 2010.  He graduated with a BA in Computer Science from Ithaca College.
+I've been working as a professional software developer for over 10 years, specializing in SaaS platform architecture and agile development processes.  My primary focus has been in .NET/C# and Oracle, building services using WebApi, Entity Framework, and .NET OData.  I've also done a handul of front-end work using various JavaScript libraries such as jQueryUI, ExtJS, and Angular.
 
-[Check out Brendan's side projects!](./projects)
+I'm passionate about achieving and maintaining code scalability, readability, and testability using object-oriented programming best practices and test-driven design principles.  At the same time, I've learned to take a less abolute and more pragmatic approach to development in order to maximize functional output without over-engineering solutions, as well as balancing short and long term goals to optimize the combined value of both.
+
+I graduated with a BA in Computer Science from Ithaca College in 2010.  From there I spent two years in San Diego, CA working at Localeze (now Neustar Information Services) as a .NET developer working on local search data solutions.  It was there that I learned the fundamentals of Agile processes and Test-Driven Developement.
+
+In 2012 I moved back to Ithaca, NY to join ChemSW, where I've been working on material inventory management software ever since.  Between then and now, ChemSW was aquired by Accelrys, who shortly thereafter was acquired by Dassault Systemes and rebranded as BIOVIA.  I now lead a team of developers and work with other BIOVIA teams to build integrated lab solutions for a variety of industries.
+
+I also continue to dabble in various side projects in my free time, some of which you can check out on my [Projects page.](./projects)
 
 ---
 
 ## As a Composer
 
-Brendan has been composing music since 2001.  After composing the music for his high school's marching band and winning the 2004 Atlantic Coast Championship award for Best Music, he decided to pursue an education in music composition at Ithaca College.
+I've always been very musically self-driven, and once I got my hands on music notation software in early high school, the world of composition completely opened up to me in a way I never thought would be possible.  
 
-[Check out Brendan's original compositions!](./compositions)
+I started off writing pop rock songs, then later moved on to concert band VGM arrangements.  Eventually I started writing original concert band pieces, one of which was used in my [high school's marching band show](https://www.youtube.com/watch?v=vsYH70PT9Aw) and ended up winning the 2004 Atlantic Coast Championships and the award for Best Music.  This opportunity gave me the ambition to pursue an education in music composition, which I did at Ithaca College, where I received my Bachelors of Music in 2010.  
+
+Admittedly, I haven't done much composing since then, but that can change in the future.
+
+You can check out original works I've done on my [Compositions page.](./compositions)
 
 ---
 
 ## As an Accordionist
 
-Brendan bought his first accordion when he was 16 at a flea market for $100.  Once he learned his first tune he knew this was the instrument for him - it was the most fun he's had playing any other instrument.
+I bought my first accordion when I was 16 at a flea market for $100, and once I learned my first tune I knew this was the instrument for me - the accordion is the most fun I've had playing any musical instrument, and that's still true to this day.
 
-Since then Brendan has explored various musical styles and genres on the accordion, from Irish folk, to Klezmer, to Jazz.  Primaily he loves to play video game music, which encompasses a wide variety of styles and evokes a great sense of nostalgia in listeners, as well as himself.
+Over the years I've explored various musical styles and genres on the accordion, from Irish folk, to Klezmer, to Jazz.  I love to play video game music the most because it encompasses a wide variety of styles and evokes a great sense of nostalgia in listeners such as myself.  It also requires a bit of creativity to arrange these tunes for accordion, which allows for unique exploration of patterns and textures not commonly heard on the instrument.
 
-[Check out Brendan's accordion performances on YouTube!](https://www.youtube.com/channel/UCNoZbcrp9AXKxevNwGelc9g)
+You can check out my accordion perfromances and more at my [YouTube channel.](https://www.youtube.com/channel/UCNoZbcrp9AXKxevNwGelc9g)
