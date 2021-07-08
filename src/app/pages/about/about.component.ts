@@ -8,6 +8,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
 
+  composerFileName: string = 'about-composer.md';
+  accordionistFileName: string = 'about-accordionist.md';
+
   constructor(private route: ActivatedRoute) { }
   
   data: string;

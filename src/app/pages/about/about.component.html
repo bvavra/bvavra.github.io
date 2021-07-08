@@ -1,71 +1,34 @@
 
 <!-- TODO: About Page Items:
     - write up a bio.  consider professional development vs music persona, etc.
-    - determine if we want landing page links to other pages and, if so, decide if this is redundant with the home page.
-    -- I think it makes sense to keep this page and have this be the wordier bio section.
-       The home page should be less-wordy, more "check stuff out!"" clickable things
+    - Currently this sub nav only highlights the current selection on focus - ideally we'd do the same thing with nav-link.active
 -->
 <ul ngbNav #nav="ngbNav" class="pager list-inline">
     <li ngbNavItem>
         <a ngbNavLink>Developer</a>
         <ng-template ngbNavContent>
-            <h2>As a Developer</h2>
-            <p>I've been working as a professional software developer for over 10 years, specializing in SaaS platform architecture and agile development processes.  
-                My primary focus has been in .NET/C# and Oracle, building services using WebApi, Entity Framework, and .NET OData.  
-                I've also done a handul of front-end work using various JavaScript libraries such as jQueryUI, ExtJS, and Angular.
-            <br><br>
-            I'm passionate about achieving and maintaining code scalability, readability, and testability 
-            using object-oriented programming best practices and test-driven design principles.  
-            At the same time, I've learned to take a less abolute and more pragmatic approach to development 
-            in order to maximize functional output without over-engineering solutions, 
-            as well as balancing short and long term goals to optimize the combined value of both.
-            <br><br>
-            I graduated with a BA in Computer Science from Ithaca College in 2010.  
-            From there I spent two years in San Diego, CA working at Localeze (now Neustar Information Services) as a .NET developer working on local search data solutions.  
-            It was there that I learned the fundamentals of Agile processes and Test-Driven Developement.
-            <br><br>
-            In 2012 I moved back to Ithaca, NY to join ChemSW, where I've been working on material inventory management software ever since.  
-            Between then and now, ChemSW was aquired by Accelrys, who shortly thereafter was acquired by Dassault Systemes and rebranded as BIOVIA.  
-            I now lead a team of developers and work with other BIOVIA teams to build integrated lab solutions for a variety of industries.
-            <br><br>
-            I also continue to dabble in various side projects in my free time, some of which you can check out on my <a href="./projects">Projects page</a>.</p>
+            <!--We're using data instead of fileName here to ensure the file is loaded before rendering the component for the first time, 
+                or else you get a flicker of the footer and scroll bar jumping around the page. 
+            
+                If we ever decide to want to navigate to the other nav tiems from other pages we may need to revisit how we do this.
+            
+                NOTE: this sometimes happens anyway when clicking the other two buttons while on the page.  To eliminate this completely,
+                we'd need to update the route module and markdownResolver to support an array of files instead of a single one.
+                Or, you know, dump MD and stick with HTML.
+            -->
+            <app-markdown [data]="data"></app-markdown> 
         </ng-template>
     </li>
     <li ngbNavItem>
         <a ngbNavLink>Composer</a>
         <ng-template ngbNavContent>
-            <h2>As a Composer</h2>
-            <p>
-                I've always been very musically self-driven, and once I got my hands on music notation software in early high school, 
-                the world of composition completely opened up to me in a way I never thought would be possible.  
-                <br><br>
-                I started off writing pop rock songs, then later moved on to concert band VGM arrangements.  Eventually I started writing original concert band pieces, 
-                one of which was used in my <a href="https://www.youtube.com/watch?v=vsYH70PT9Aw">high school's marching band show</a> 
-                and ended up winning the 2004 Atlantic Coast Championships and the award for Best Music.  
-                This opportunity gave me the ambition to pursue an education in music composition, 
-                which I did at Ithaca College, where I received my Bachelors of Music in 2010.  
-                <br><br>
-                Admittedly, I haven't done much composing since then, but that can change in the future.
-                <br><br>
-                You can check out original works I've done on my <a href="./compositions">Compositions page</a>.
-            </p>
+            <app-markdown [fileName]="composerFileName"></app-markdown>
         </ng-template>
     </li>
     <li ngbNavItem>
         <a ngbNavLink>Accordionist</a>
         <ng-template ngbNavContent>
-            <h2>As an Accordionist</h2>
-            <p>
-                I bought my first accordion when I was 16 at a flea market for $100, and once I learned my first tune I knew this was the instrument for me - 
-                the accordion is the most fun I've had playing any musical instrument, and that's still true to this day.
-                <br><br>
-                Over the years I've explored various musical styles and genres on the accordion, from Irish folk, to Klezmer, to Jazz.  
-                I love to play video game music the most because it encompasses a wide variety of styles and evokes a great sense of nostalgia in listeners such as myself.  
-                It also requires a bit of creativity to arrange these tunes for accordion, 
-                which allows for unique exploration of patterns and textures not commonly heard on the instrument.
-                <br><br>
-                You can check out my accordion perfromances and more at my <a href="(https://www.youtube.com/channel/UCNoZbcrp9AXKxevNwGelc9g">YouTube channel</a>.
-            </p>
+            <app-markdown [fileName]="accordionistFileName"></app-markdown>
         </ng-template>
     </li>
 </ul>

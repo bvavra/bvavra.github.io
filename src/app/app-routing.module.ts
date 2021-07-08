@@ -24,7 +24,7 @@ const routes: Routes = [
       { 
         path: 'about', component: AboutComponent, 
         resolve: { markdownData: MarkdownResolver }, 
-        data: { fileName: 'about.md', title: 'About Brendan'} 
+        data: { fileName: 'about-developer.md', title: 'About Brendan'} 
       },
       { 
         path: 'projects', component: ProjectsComponent, 
