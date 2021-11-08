@@ -39,6 +39,22 @@ export class VgmCoversComponent implements OnInit {
           }
           //TODO: consider also uploading/sharing .mid files and using this icon: https://fontawesome.com/icons/file-audio?style=solid
           //And maybe if there's a SoundCloud link we can share that too
+          if(obj.snippet.description.includes('open.spotify.com')){
+            let spotifyURL = obj.snippet.description.match('https://open.spotify.com/(.*)[\r\n|\r|\n|↵]+');
+            obj.snippet.spotifyURL = spotifyURL[0];
+          }
+          if(obj.snippet.description.includes('music.apple.com')){
+            let appleMusicURL = obj.snippet.description.match('https://music.apple.com/us/album/(.*)[\r\n|\r|\n|↵]+');
+            obj.snippet.appleMusicURL = appleMusicURL[0];
+          }
+          if(obj.snippet.description.includes('pandora.com/artist/brendan-vavra/')){
+            let pandoraURL = obj.snippet.description.match('https://www.pandora.com/artist/brendan-vavra/(.*)[\r\n|\r|\n|↵]+');
+            obj.snippet.pandoraURL = pandoraURL[0];
+          }
+          if(obj.snippet.description.includes('amazon.com')){
+            let amazonMusicURL = obj.snippet.description.match('https://www.amazon.com/dp/(.*)[\r\n|\r|\n|↵]+');
+            obj.snippet.amazonMusicURL = amazonMusicURL[0];
+          }
 
           //Do we also want Title?  Or is that a bit _too_ redundant with the header?
           let composer = obj.snippet.description.match('Composer:(.*)[\r\n|\r|\n|↵]+');

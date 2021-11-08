@@ -22,3 +22,7 @@
 .icon a {
     color: #404040;
 }
+
+.footer-links>li {
+     display: inline-block;
+}

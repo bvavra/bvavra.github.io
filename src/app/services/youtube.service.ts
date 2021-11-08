@@ -62,6 +62,10 @@ export interface youtubeVideo {
   resourceId: youtubeVideoResource;
   safeURL: SafeResourceUrl;
   sheetMusicURL: SafeResourceUrl;
+  spotifyURL: SafeResourceUrl;
+  pandoraURL: SafeResourceUrl;
+  appleMusicURL: SafeResourceUrl;
+  amazonMusicURL: SafeResourceUrl;
   composer: string;
   game: string;
 }

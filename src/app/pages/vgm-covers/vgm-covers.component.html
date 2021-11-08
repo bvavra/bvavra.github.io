@@ -8,7 +8,7 @@
  -->
 
 <div class="container" *ngIf="vgmCoverVideos" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="150" (scrolled)="onScroll()">
-    <ul class="list-inline text-center footer-links">
+    <ul class="list-inline text-center">
         <li *ngFor="let item of vgmCoverVideos"> 
             <hr>
             <div class="row">
@@ -21,16 +21,48 @@
                     <div *ngIf="item.snippet.game">
                         <div>{{item.snippet.game}}</div>
                     </div>
-                    
-                    <div *ngIf="item.snippet.sheetMusicURL" class="icon">
-                        <a [href]="item.snippet.sheetMusicURL | safeResourceURL" target="_blank" title="Sheet Music">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fas fa-scroll fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </div>
-                    
+                    <ul class="list-inline text-center footer-links">
+                        <li *ngIf="item.snippet.spotifyURL" class="icon" > 
+                            <a [href]="item.snippet.spotifyURL | safeResourceURL" target="_blank" title="Spotify">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-spotify fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li *ngIf="item.snippet.pandoraURL" class="icon" > 
+                            <a [href]="item.snippet.pandoraURL | safeResourceURL" target="_blank" title="Pandora">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-product-hunt fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li *ngIf="item.snippet.appleMusicURL" class="icon" > 
+                            <a [href]="item.snippet.appleMusicURL | safeResourceURL" target="_blank" title="Apple Music">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-apple fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li *ngIf="item.snippet.amazonMusicURL" class="icon" > 
+                            <a [href]="item.snippet.amazonMusicURL | safeResourceURL" target="_blank" title="Amazon Music">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-amazon fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li> 
+                        <li *ngIf="item.snippet.sheetMusicURL" class="icon" > 
+                            <a [href]="item.snippet.sheetMusicURL | safeResourceURL" target="_blank" title="Sheet Music">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-scroll fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>    
+                    </ul>                  
                 </div>
                 <div class="col-sm-4">
                     <div class="video-container">
